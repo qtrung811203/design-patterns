@@ -40,7 +40,7 @@ class PostgresDatabase {
   }
 }
 
-class UserServiceDDP {
+class UserServiceDIP {
   constructor(database) {
     this.database = database;
   }
@@ -54,6 +54,6 @@ class UserServiceDDP {
 const mongodb = new MongoDbDatabase();
 const postgresdb = new PostgresDatabase();
 
-const userServiceDDP = new UserServiceDDP(postgresdb);
-// const userServiceDDP = new UserServiceDDP(mongodb); // using mongodb
-userServiceDDP.saveUser("Trung");
+const userServiceDIP = new UserServiceDIP(postgresdb);
+// const userServiceDIP = new UserServiceDIP(mongodb); // using mongodb
+userServiceDIP.saveUser("Trung");
